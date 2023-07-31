@@ -9,6 +9,8 @@ public class ReServiceApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ReServiceApplication.class, args);
 		System.out.println("Monika Changes v1");
+		System.out.println("Monika Changes v2");
+		
 	}
 
 }
