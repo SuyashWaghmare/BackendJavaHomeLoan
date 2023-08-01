@@ -16,35 +16,6 @@ public class ReServiceApplication {
 		System.out.println("Rashmi Changes v4");
 		System.out.println("Monika Changes v5");
 
-		System.out.println("smita changes v7");
-		System.out.println("smita changes v7");
-		System.out.println("smita changes v7");
-		System.out.println("smita changes v7");
-		
-		
-		
-		
-		
-		
-		System.out.println("Suyash");
-		System.out.println("Suyash");
-		System.out.println("Suyash");
-		
-		
-		System.out.println("Sagar Changes v9");
-		System.out.println("sagar changes v10");
-		
-		
-		
-		System.out.println("Monika Changes v11");
-		
-		
-		System.out.println("Monika changes v12");
-		
-		
-		System.out.println("Monika changes v13");
-		
-		System.out.println("Rashmi Changes v11");
 	}
 
 }
