@@ -16,8 +16,12 @@ public class ReServiceApplication {
 	   
 	    
 	    
-	    System.out.println("Smita ");
+	   
 		
+	}
+	public void smita()
+	{
+		System.out.println("smita");
 	}
 
 }
