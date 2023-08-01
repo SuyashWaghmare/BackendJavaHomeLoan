@@ -8,7 +8,7 @@ public class ReServiceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ReServiceApplication.class, args);
-<<<<<<< HEAD
+
 		System.out.println("Monika Changes v1");
 		System.out.println("Monika Changes v2");
 		System.out.println("Monika Changes v3");
@@ -45,10 +45,6 @@ public class ReServiceApplication {
 		System.out.println("Monika changes v13");
 		
 		System.out.println("Rashmi Changes v11");
-
-		
-=======
->>>>>>> 7646a3c152f6358e8e14f71bf3aeddc2e16c0bcf
 	}
 
 }
