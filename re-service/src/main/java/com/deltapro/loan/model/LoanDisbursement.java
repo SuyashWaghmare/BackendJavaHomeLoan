@@ -1,6 +1,7 @@
 package com.deltapro.loan.model;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,6 +14,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Builder
 public class LoanDisbursement {
+	@Id
 	private int agreementid;
 	private int loanNo;
 	private String agrrementDate;
@@ -24,7 +26,7 @@ public class LoanDisbursement {
 	private String accountType;
 	private double transferAmount;
 	private String paymentStatus;
-	private String amountPaidDate;
+	private String amountPaidDate;  
 	
 	
 	

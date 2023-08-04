@@ -1,6 +1,7 @@
 package com.deltapro.loan.model;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,6 +16,7 @@ import lombok.NoArgsConstructor;
 
 public class GuarantorDetails {
 
+	@Id
 	private int gid;
 	private String gName;
 	private String gDateofBirth;
@@ -24,7 +26,7 @@ public class GuarantorDetails {
 	private String gMortgageDetails;
 	private String gJobDetails;
 	private String gLocalAddress;
-	private String gPermanentAddress;
+	private String gPermanentAddress;  
 	
 	
 	

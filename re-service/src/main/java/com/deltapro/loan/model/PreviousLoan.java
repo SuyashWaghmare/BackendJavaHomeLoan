@@ -1,6 +1,7 @@
 package com.deltapro.loan.model;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
@@ -14,6 +15,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Builder
 public class PreviousLoan {
+	@Id
 	private int ploanid;
 	private double ploanAmount;
 	private int pTenure;
@@ -23,7 +25,7 @@ public class PreviousLoan {
 	@OneToMany
 	private PreviousLoanBank pBankDetails;
 	private String status;
-	private String remark;
+	private String remark;  
 
 	
 }

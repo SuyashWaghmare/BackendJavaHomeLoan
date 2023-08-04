@@ -1,6 +1,7 @@
 package com.deltapro.loan.model;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
@@ -15,6 +16,7 @@ import lombok.NoArgsConstructor;
 @Builder
 
 public class PropertyInfo {
+	@Id
 	private int propertyId;
 	private String propertytype;
 	private String propertyArea;
@@ -24,7 +26,7 @@ public class PropertyInfo {
 	private Byte[] propertyDocuments;
 	private Byte[] priceProofs;
 	@OneToOne
-	private PropertyAddress propertyAddress;
+	private PropertyAddress propertyAddress;  
 	
 	
 	
