@@ -26,7 +26,7 @@ public class LoanDisbursement {
 	private String accountType;
 	private double transferAmount;
 	private String paymentStatus;
-	private String amountPaidDate;  
+	private String amountPaidDate; 
 	
 	
 	
