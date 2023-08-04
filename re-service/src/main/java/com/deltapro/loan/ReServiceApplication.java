@@ -8,14 +8,8 @@ public class ReServiceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ReServiceApplication.class, args);
-		
-		
-		
-		
-		
-		
-		
-		
+
+		System.out.println("Deltapro loan app...");
 	}
 
 }
