@@ -1,10 +1,14 @@
 package com.deltapro.loan.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,63 +22,64 @@ import lombok.NoArgsConstructor;
 public class Customer {
 
 	@Id
-	private int eID;
-	private String name;
-	private String DOB;
-	private int age;
-	private String Gender;
-	private String Email;
-	private long MobileNo;
-	private long cAdditionalMobileNo;
-	private long cAmountPaidforHome;
-	private long cTotalLoanRequired;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int customerId;
+	private String customerName;
+	private String customerBirthDate;
+	private int customerAge;
+	private String customerGender;
+	private String customerEmail;
+	private long customerMobileNo;
+	private long customerAdditionalMobileNo;
+	private long customerAmountPaidforHome;
+	private long customerTotalLoanRequired;
 
-	@OneToMany
-	private EducationlInfo cEducationalInfo;
+	@OneToOne(cascade = CascadeType.ALL)
+	private AccountDetails accountDetails;
 
-	@OneToOne
-	private AllPersonalDocs cAllPersonalDocs;
+	@OneToOne(cascade = CascadeType.ALL)
+	private Cibil cibil;
 
-	@OneToMany
-	private DependentInfo cDependentInfo;
+	@OneToOne(cascade = CascadeType.ALL)
+	private CustomerPermanentAddress customerPermanentAddress;
 
-	@OneToOne
-	private CustomerAddress cAddress;
+	@OneToOne(cascade = CascadeType.ALL)
+	private CustomerLocalAddress customerLocalAddress;
 
-	@OneToOne
-	private Mortgage cMortgageDetails;
+	@OneToOne(cascade = CascadeType.ALL)
+	private CustomerVerification verification;
 
-	@OneToOne
-	private Profession cProfession;
+	@OneToOne(cascade = CascadeType.ALL)
+	private DependentInfo dependentInfo;
 
-	@OneToOne
-	private Cibil ccibil;
+	@OneToOne(cascade = CascadeType.ALL)
+	private Documents documents;
 
-	@OneToOne
-	private LoanDetails cLoanDetails;
+	@OneToOne(cascade = CascadeType.ALL)
+	private GuarantorDetails guarantorDetails;
 
-	@OneToMany
-	private PreviousLoan cPreviousLoan;
+	@OneToOne(cascade = CascadeType.ALL)
+	private Ledger ledger;
 
-	@OneToOne
-	private AccountDetails cAccountDetails;
+	@OneToOne(cascade = CascadeType.ALL)
+	private LoanDetails loanDetails;
 
-	@OneToOne
-	private PropertyInfo cPropertyInfo;
+	@OneToOne(cascade = CascadeType.ALL)
+	private LoanDisbursement loanDisbursement;
 
-	@OneToMany
-	private GuarantorDetails cGuarantorDetails;
+	@OneToMany(cascade = CascadeType.ALL)
+	private List<Mortgage> mortgageDetails;
 
-	@OneToOne
-	private LoanDisbursement cLoanDisbursement;
+	@OneToMany(cascade = CascadeType.ALL)
+	private List<PreviousLoan> previousLoan;
 
-	@OneToOne
-	private Ledger cledger;
+	@OneToOne(cascade = CascadeType.ALL)
+	private Profession profession;
 
-	@OneToOne
-	private SanctionLetter cSanctionLette;
+	@OneToMany(cascade = CascadeType.ALL)
+	private List<PropertyInfo> propertyInfo;
 
-	@OneToOne
-	private CustomerVerification cverification;
+	@OneToOne(cascade = CascadeType.ALL)
+	private SanctionLetter sanctionLetter;
 
 }
