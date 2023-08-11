@@ -1,8 +1,9 @@
 package com.deltapro.loan.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,10 +14,10 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class Ledger {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int ledgerId;
 	private String ledgerCreatedDate;
 	private Double totallLoanAmount;
@@ -32,4 +33,5 @@ public class Ledger {
 	private String currentMonthEmiStatus;
 	private String loanEndDate;
 	private String loanStatus;
+
 }

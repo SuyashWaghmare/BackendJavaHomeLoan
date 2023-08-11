@@ -1,23 +1,17 @@
-package com.deltapro.loan.model;
+package com.deltapro.loan.dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class DependentInfo {
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int dependentInfoId;
+public class DependentInfoDto {
+
+	//private int dependentInfoId;
 	private String fatherName;
 	private String motherName;
 	private int noOfFamilyMember;

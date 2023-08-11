@@ -1,10 +1,10 @@
 package com.deltapro.loan.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
 import javax.persistence.OneToOne;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,12 +17,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class LoanDetails {
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int loanId;
 	private int loanNo;
-
-	@OneToOne
-	private EmiDetails emiDetails;
-
 	private Double loanAmount;
 	private int rateOfInterest;
 	private int tenure;
@@ -30,7 +27,9 @@ public class LoanDetails {
 	private int processingFees;
 	private Double totalInterest;
 	private String sanctionDate;
-	private String remark;
 	private String status;
+
+	@OneToOne // (mappedBy = "loanDetails", cascade = CascadeType.ALL)
+	private EmiDetails emiDetails;
 
 }
